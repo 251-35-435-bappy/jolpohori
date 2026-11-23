@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="bn" dir="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>জলপ্রহরী - ড্যাশবোর্ড</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Login Screen (shown initially) -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-card">
+      <div class="login-header">
+        <div class="login-logo">JP</div>
+        <h1>জলপ্রহরী</h1>
+        <p>দক্ষ ও নিরাপদ ব্যবস্থাপনা সিস্টেম</p>
+      </div>
+      <div class="login-body">
+        <form id="login-form">
+          <div class="form-group">
+            <label class="form-label" data-i18n="auth_username">ব্যবহারকারীর নাম</label>
+            <input type="text" class="form-input" placeholder="ব্যবহারকারীর নাম লিখুন" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="auth_password">পাসওয়ার্ড</label>
+            <input type="password" class="form-input" placeholder="পাসওয়ার্ড লিখুন" required>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" id="remember-me" class="form-check-input">
+            <label class="form-check-label" data-i18n="auth_remember">আমাকে মনে রাখুন</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-login" data-i18n="auth_login">লগইন করুন</button>
+        </form>
+        <div class="login-footer">
+          <p>নবীন ব্যবহারকারী? <a href="#" onclick="app.registerUser()">অ্যাকাউন্ট তৈরি করুন</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main App (hidden until login) -->
+  <div id="main-app" class="app-container" style="display: none;">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">JP</div>
+        <div class="sidebar-title">জলপ্রহরী</div>
+      </div>
+      <div class="sidebar-nav">
+        <div class="nav-item active" data-module="dashboard">
+          <span class="nav-icon">📊</span>
+          <span data-i18n="nav_dashboard">ড্যাশবোর্ড</span>
+        </div>
+        <div class="nav-item" data-module="modules">
+          <span class="nav-icon">📦</span>
+          <span data-i18n="nav_modules">মডিউলসমূহ</span>
+        </div>
+        <div class="nav-item" data-module="users">
+          <span class="nav-icon">👥</span>
+          <span data-i18n="nav_users">ব্যবহারকারী</span>
+        </div>
+        <div class="nav-item" data-module="reports">
+          <span class="nav-icon">📈</span>
+          <span data-i18n="nav_reports">রিপোর্ট</span>
+        </div>
+        <div class="nav-item" data-module="billing">
+          <span class="nav-icon">💳</span>
+          <span data-i18n="module_billing">বিলিং</span>
+        </div>
+        <div class="nav-item" data-module="settings">
+          <span class="nav-icon">⚙️</span>
+          <span data-i18n="nav_settings">সেটিংস</span>
+        </div>
+        <div class="nav-item" data-module="help">
+          <span class="nav-icon">❓</span>
+          <span data-i18n="nav_help">সহায়তা</span>
+        </div>
+        <div class="nav-item" style="margin-top: auto;" onclick="app.logout()">
+          <span class="nav-icon">🚪</span>
+          <span data-i18n="nav_logout">লগআউট</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">
+            ☰
+          </button>
+          <h1 class="page-title" id="page-title">ড্যাশবোর্ড</h1>
+        </div>
+        <div class="header-right">
+          <div class="lang-selector">
+            <button class="lang-btn active" data-lang="bn" data-i18n="lang_bangla">বাংলা</button>
+            <button class="lang-btn" data-lang="en" data-i18n="lang_english">English</button>
+          </div>
+          <div class="user-profile" data-i18n-title="header_profile">
+            <div class="user-avatar" id="user-avatar">AI</div>
+            <div class="user-info">
+              <span id="user-name">আমিনুল ইসলাম</span>
+              <span id="user-role">অ্যাডমিন</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dynamic Content Area -->
+      <div id="content-area">
+        <!-- Content loaded by JavaScript -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
