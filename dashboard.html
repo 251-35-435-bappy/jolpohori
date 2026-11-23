@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>জলপ্রহরী - ড্যাশবোর্ড</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar-nav">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">JP</div>
+      <div class="sidebar-title">জলপ্রহরী</div>
+    </div>
+    <div class="sidebar-menu">
+      <div class="nav-item active" onclick="app.loadModule('dashboard')">
+        <span class="nav-icon">📊</span>
+        <span>ড্যাশবোর্ড</span>
+      </div>
+      <div class="nav-item" onclick="app.loadModule('users')">
+        <span class="nav-icon">👥</span>
+        <span>ব্যবহারকারী</span>
+      </div>
+      <div class="nav-item" onclick="app.loadModule('reports')">
+        <span class="nav-icon">📈</span>
+        <span>রিপোর্ট</span>
+      </div>
+      <div class="nav-item" onclick="app.loadModule('billing')">
+        <span class="nav-icon">💳</span>
+        <span>বিলিং</span>
+      </div>
+      <div class="nav-item" onclick="app.loadModule('settings')">
+        <span class="nav-icon">⚙️</span>
+        <span>সেটিংস</span>
+      </div>
+      <div class="nav-item" onclick="app.loadModule('help')">
+        <span class="nav-icon">❓</span>
+        <span>সহায়তা</span>
+      </div>
+    </div>
+    <div class="sidebar-footer">
+      <div class="nav-item" onclick="app.logout()" style="margin-top: auto;">
+        <span class="nav-icon">🚪</span>
+        <span>লগআউট</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="dashboard-header">
+      <div class="header-left">
+        <h1 id="page-title">ড্যাশবোর্ড</h1>
+      </div>
+      <div class="header-right">
+        <div class="user-profile">
+          <div class="user-avatar" id="user-avatar">AI</div>
+          <div class="user-info">
+            <span id="user-name">ব্যবহারকারী</span>
+            <span id="user-role">অ্যাডমিন</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="content-area">
+      <!-- Dynamic content loaded here -->
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

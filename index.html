@@ -1,121 +1,163 @@
 <!DOCTYPE html>
-<html lang="bn" dir="auto">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>জলপ্রহরী - ড্যাশবোর্ড</title>
+  <title>জলপ্রহরী - সুরক্ষা ও সচেতনতা সিস্টেম</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Bengali:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Login Screen (shown initially) -->
-  <div id="login-screen" class="login-screen">
-    <div class="login-card">
-      <div class="login-header">
-        <div class="login-logo">JP</div>
-        <h1>জলপ্রহরী</h1>
-        <p>দক্ষ ও নিরাপদ ব্যবস্থাপনা সিস্টেম</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">জলপ্রহরী</div>
+      <div class="nav-links">
+        <a href="#" class="nav-link active">হোম</a>
+        <a href="#features" class="nav-link">বৈশিষ্ট্য</a>
+        <a href="#demo" class="nav-link">ডেমো</a>
+        <a href="dashboard.html" class="nav-btn">ড্যাশবোর্ড লগইন</a>
       </div>
-      <div class="login-body">
-        <form id="login-form">
-          <div class="form-group">
-            <label class="form-label" data-i18n="auth_username">ব্যবহারকারীর নাম</label>
-            <input type="text" class="form-input" placeholder="ব্যবহারকারীর নাম লিখুন" required>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-badge">AI Builders Congress 2026</div>
+      <h1 class="hero-title">জলপ্রহরী</h1>
+      <p class="hero-subtitle">ইন্টারনেট ছাড়াই জল ও সতর্কবার্তা ব্যবস্থা, SOS পরিষেবা এবং সুরক্ষিত সংযোগের ব্যবস্থাপনার জন্য উন্নত সিস্টেম</p>
+      
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number">১০-১৬ কিমি</div>
+          <div class="stat-label">সীমা LoRa নেটওয়ার্কের</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">২-৯ দিন</div>
+          <div class="stat-label">ব্যাটারির সঞ্চালন ব্যাবস্থাপনা</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">৩০-১০০ আশ্রয়</div>
+          <div class="stat-label">দিন বাঁচা সক্ষমতা</div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="dashboard.html" class="btn-primary btn-lg">ড্যাশবোর্ডে যান</a>
+        <a href="#demo" class="btn-outline btn-lg">ডেমো দেখুন</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="phone-mockup">
+        <div class="phone-header">
+          <div class="phone-logo">জলপ্রহরী</div>
+          <div class="phone-tagline">নিরাপদ সangkেত ও সুরক্ষা রักษা</div>
+          <div class="phone-menu">☰</div>
+        </div>
+        <div class="phone-content">
+          <div class="phone-select">
+            <select class="phone-select-input">
+              <option>কঠিন,.longitude</option>
+              <option>সহজ.latitude</option>
+            </select>
           </div>
-          <div class="form-group">
-            <label class="form-label" data-i18n="auth_password">পাসওয়ার্ড</label>
-            <input type="password" class="form-input" placeholder="পাসওয়ার্ড লিখুন" required>
+          <div class="phone-gauge">
+            <div class="gauge-circle">
+              <div class="gauge-fill"></div>
+              <div class="gauge-text">%</div>
+            </div>
           </div>
-          <div class="form-group form-check">
-            <input type="checkbox" id="remember-me" class="form-check-input">
-            <label class="form-check-label" data-i18n="auth_remember">আমাকে মনে রাখুন</label>
+          <div class="phone-progress">
+            <div class="progress-label">পক্ষিণের তথ্য (দিন): চিত্র 단층</div>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary btn-login" data-i18n="auth_login">লগইন করুন</button>
-        </form>
-        <div class="login-footer">
-          <p>নবীন ব্যবহারকারী? <a href="#" onclick="app.registerUser()">অ্যাকাউন্ট তৈরি করুন</a></p>
+          <div class="phone-alert">
+            <div class="alert-left"></div>
+            <div class="alert-right">
+              <label class="checkbox-label">
+                <input type="checkbox" class="checkbox-input"> கட்ட�
+                লার নিরাপত্তা
+              </label>
+            </div>
+          </div>
+          <div class="phone-button">
+            <button class="phone-btn">আপনার কর্তব্য</button>
+          </div>
+        </div>
+        <div class="phone-nav">
+          <div class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">হোম</span>
+          </div>
+          <div class="nav-item">
+            <span class="nav-icon">🆘</span>
+            <span class="nav-label">SOS সার্বক্ষণিক</span>
+          </div>
+          <div class="nav-item">
+            <span class="nav-icon">📖</span>
+            <span class="nav-label">শ্রেণী</span>
+          </div>
+          <div class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span class="nav-label">প্রোফাইল</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Main App (hidden until login) -->
-  <div id="main-app" class="app-container" style="display: none;">
-    <!-- Sidebar -->
-    <nav class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <div class="sidebar-logo">JP</div>
-        <div class="sidebar-title">জলপ্রহরী</div>
-      </div>
-      <div class="sidebar-nav">
-        <div class="nav-item active" data-module="dashboard">
-          <span class="nav-icon">📊</span>
-          <span data-i18n="nav_dashboard">ড্যাশবোর্ড</span>
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">আমাদের বৈশিষ্ট্যসমূহ</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3>ইন্টারনেট-মুক্ত সangkেত</h3>
+          <p>LoRa নেটওয়ার্কের মাধ্যমে ১০-১৬ কিমি বিস্তৃত এলাকা কভারেজ</p>
         </div>
-        <div class="nav-item" data-module="modules">
-          <span class="nav-icon">📦</span>
-          <span data-i18n="nav_modules">মডিউলসমূহ</span>
+        <div class="feature-card">
+          <div class="feature-icon">🆘</div>
+          <h3>SOS সার্বক্ষণিক পরিষেবা</h3>
+          <p>জরুরি পরিস্থিতিতে ত্বরিত সহায়তা এবং রক্ষণাবেক্ষণ</p>
         </div>
-        <div class="nav-item" data-module="users">
-          <span class="nav-icon">👥</span>
-          <span data-i18n="nav_users">ব্যবহারকারী</span>
+        <div class="feature-card">
+          <div class="feature-icon">🔋</div>
+          <h3>দীর্ঘস্থায়ী ব্যাটারি</h3>
+          <p>২-৯ দিন ব্যাটারি সঞ্চালন কৌশল</p>
         </div>
-        <div class="nav-item" data-module="reports">
-          <span class="nav-icon">📈</span>
-          <span data-i18n="nav_reports">রিপোর্ট</span>
-        </div>
-        <div class="nav-item" data-module="billing">
-          <span class="nav-icon">💳</span>
-          <span data-i18n="module_billing">বিলিং</span>
-        </div>
-        <div class="nav-item" data-module="settings">
-          <span class="nav-icon">⚙️</span>
-          <span data-i18n="nav_settings">সেটিংস</span>
-        </div>
-        <div class="nav-item" data-module="help">
-          <span class="nav-icon">❓</span>
-          <span data-i18n="nav_help">সহায়তা</span>
-        </div>
-        <div class="nav-item" style="margin-top: auto;" onclick="app.logout()">
-          <span class="nav-icon">🚪</span>
-          <span data-i18n="nav_logout">লগআউট</span>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>ড্যাশবোর্ড মনিটরিং</h3>
+          <p>রিয়েল-টাইম অবস্থা এবং সুরক্ষা রিপোর্ট</p>
         </div>
       </div>
-    </nav>
+    </div>
+  </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Header -->
-      <header class="header">
-        <div class="header-left">
-          <button class="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">
-            ☰
-          </button>
-          <h1 class="page-title" id="page-title">ড্যাশবোর্ড</h1>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">জলপ্রহরী</div>
+        <p class="footer-text">সুরক্ষিত ও সচেতন সমাজের জন্য prototype সিস্টেম</p>
+        <div class="footer-social">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
         </div>
-        <div class="header-right">
-          <div class="lang-selector">
-            <button class="lang-btn active" data-lang="bn" data-i18n="lang_bangla">বাংলা</button>
-            <button class="lang-btn" data-lang="en" data-i18n="lang_english">English</button>
-          </div>
-          <div class="user-profile" data-i18n-title="header_profile">
-            <div class="user-avatar" id="user-avatar">AI</div>
-            <div class="user-info">
-              <span id="user-name">আমিনুল ইসলাম</span>
-              <span id="user-role">অ্যাডমিন</span>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!-- Dynamic Content Area -->
-      <div id="content-area">
-        <!-- Content loaded by JavaScript -->
       </div>
-    </main>
-  </div>
+      <div class="footer-bottom">
+        <p>&copy; ২০২৬ জলপ্রহরী সিস্টেম। সব অধিকার সংরক্ষিত。</p>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Scripts -->
-  <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
